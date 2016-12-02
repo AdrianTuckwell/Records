@@ -27,6 +27,13 @@ describe('store stock', function() {
       assert.deepEqual(record, store.box[0]);
     });
 
-
+    it('should be able to remove a record', function() {
+      var store = new Store({name:'Rocking Ricks',city:"Inverness"});
+      var record = new Record({artist:'REM',title:"Out of Time", price: 9.99});
+      store.add(record);
+      assert.equal(1, store.box.length);
+      store.remove(record);
+      assert.equal(0, store.box.length);
+    });
 
 });
