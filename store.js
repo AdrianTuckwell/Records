@@ -4,4 +4,10 @@ var Store = function(params) {
   this.box = [];
 };
 
+
+Store.prototype = {
+  add: function(record) {
+    this.box.push(record);
+  }
+}
 module.exports = Store;
