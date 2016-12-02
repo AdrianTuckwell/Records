@@ -1,0 +1,14 @@
+{
+  "name": "records",
+  "version": "1.0.0",
+  "description": "record store JS program",
+  "main": "record.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Tuckwell",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
