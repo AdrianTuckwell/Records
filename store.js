@@ -44,16 +44,9 @@ Store.prototype = {
     this.inventory -= record.price;
     this.cash += record.price;
   },
-
-
-  //"name: REM, title: Out of Time, price: £10"
-
-
-
-
-
-
-
+  financeReport: function() {
+    return this.cash + this.stockValue();
+  }
 
 
 };

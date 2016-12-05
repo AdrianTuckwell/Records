@@ -111,6 +111,21 @@ describe('store cash', function() {
         assert.equal(110, store.cash);
       });
 
+      it('should be report on Cash and value of inventory', function() {
+        var store = new Store({name:'Rocking Ricks',city:"Inverness"});
+        var record1 = new Record({artist:'REM',title:"Out of Time", price: 10});
+        var record2 = new Record({artist:'B52s',title:"Rocklobster", price: 10});
+        var record3 = new Record({artist:'The Cure',title:"Standing on a beach", price: 10});
+        store.add(record1);
+        store.add(record2);
+        store.add(record3);
+        assert.equal(3, store.stock);
+        assert.equal(130, store.financeReport());
+
+      });
+
+
+
 
 });
 
