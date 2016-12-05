@@ -37,8 +37,13 @@ Store.prototype = {
                + ", price: £" + record.price.toString();
         });
     return inventory.toString();
-  }
-
+  },
+  sell: function(record) {
+    this.box.pop(record);
+    this.stock --;
+    this.inventory -= record.price;
+    this.cash += record.price;
+  },
 
 
   //"name: REM, title: Out of Time, price: £10"
